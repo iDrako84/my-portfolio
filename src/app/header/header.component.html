@@ -1,0 +1,13 @@
+<header>
+    <nav class="border-gray-200 px-4 sm:px-6 py-2.5">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <app-header-logo />
+            <div class="hidden justify-center items-center w-full sm:flex sm:w-auto sm:order-1">
+                <app-header-nav [navItems]="navItems" />
+            </div>
+            <div class="flex items-center sm:hidden">
+                <app-header-nav-mobile [navItems]="navItems" />
+            </div>
+        </div>
+    </nav>
+</header>

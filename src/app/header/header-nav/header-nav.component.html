@@ -1,0 +1,12 @@
+<ul class="flex flex-col mt-4 font-medium sm:flex-row sm:space-x-8 sm:mt-0">
+    @for(navItem of navItems(); track navItem.path) {
+        <li>
+            <a [routerLink]="[navItem.path]" class="block py-2 pr-4 pl-3 bg-primary-700 sm:bg-transparent sm:text-primary-700 sm:p-0 text-white group">
+                <img [src]="navItem.icon" alt="Home" class="w-6 h-6 inline-block top-[-4px] relative">
+                {{ navItem.title }}
+                <div class="flex-auto"></div>
+                <span class="relative float-left w-0 group-hover:w-full h-1 group-hover:!bg-indigo-950 transition-all duration-500 rounded"></span>
+            </a>
+        </li>
+    }
+</ul>

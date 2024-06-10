@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this._renderer.addClass(document.body, 'font-roboto');
-    this._renderer.addClass(document.body, 'w-screen');
-    this._renderer.addClass(document.body, 'h-screen');
+    /* this._renderer.addClass(document.body, 'w-screen');
+    this._renderer.addClass(document.body, 'h-screen'); */
     this._renderer.addClass(document.body, 'bg-gradient-to-b');
     this._renderer.addClass(document.body, 'from-indigo-800');
     this._renderer.addClass(document.body, 'to-violet-800');

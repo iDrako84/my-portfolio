@@ -1,5 +1,7 @@
-import { Component, Input, WritableSignal, signal } from '@angular/core';
+import { Component, WritableSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { HeaderService } from '../header.service';
+import { NavsModel } from '../navs.model';
 
 @Component({
   selector: 'app-header-nav',
@@ -11,5 +13,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header-nav.component.scss'
 })
 export class HeaderNavComponent {
-  @Input() navItems: WritableSignal<any[]> = signal([]);
+  public navItems: WritableSignal<NavsModel[]> = this._headerService.getHeader();
+
+  constructor(
+    private _headerService: HeaderService
+  ) {}
 }

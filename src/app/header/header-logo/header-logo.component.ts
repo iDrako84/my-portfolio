@@ -8,7 +8,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header-logo.component.scss'
 })
 export class HeaderLogoComponent {
-  public name = signal('M.A.');
-  public avatarImg = signal('myAvatar.png');
+  public name = signal('Ma.');
   public githubLink = signal('https://github.com/iDrako84');
 }

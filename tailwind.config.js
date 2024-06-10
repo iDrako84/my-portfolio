@@ -4,7 +4,17 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'roboto': ['Roboto', 'sans-serif'],
+    },
+    extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-10deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+        }
+      }
+    },
   },
   plugins: [],
 }

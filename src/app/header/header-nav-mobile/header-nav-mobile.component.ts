@@ -1,7 +1,9 @@
 import { NgClass } from '@angular/common';
-import { Component, Input, WritableSignal, signal } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { EnterMenu } from '../../shared/animations/animations';
+import { NavsModel } from '../navs.model';
+import { HeaderService } from '../header.service';
 
 @Component({
   selector: 'app-header-nav-mobile',
@@ -17,8 +19,12 @@ import { EnterMenu } from '../../shared/animations/animations';
   ]
 })
 export class HeaderNavMobileComponent {
-  @Input() navItems: WritableSignal<any[]> = signal([]);
+  public navItems: WritableSignal<NavsModel[]> = this._headerService.getHeader();
   public menuOpen = signal(false);
+
+  constructor(
+    private _headerService: HeaderService
+  ) {}
 
   public openCloseMenu(): void {
     this.menuOpen.set(!this.menuOpen());

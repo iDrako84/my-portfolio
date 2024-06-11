@@ -1,3 +1,5 @@
-<a [href]="githubLink()" target="_blank" class="flex items-center relative sm:top-[-4px] self-center text-xl font-semibold whitespace-nowrap text-white">
+<a [href]="githubLink()" target="_blank" class="block relative sm:top-[-4px] self-center text-xl font-semibold whitespace-nowrap text-white group">
     {{ name() }}
+    <div class="flex-auto"></div>
+    <span class="relative float-left w-0 group-hover:w-full h-1 group-hover:!bg-indigo-950 transition-all duration-500 rounded"></span>
 </a>

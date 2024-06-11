@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, WritableSignal, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { EnterMenu } from '../../shared/animations/animations';
@@ -9,8 +8,7 @@ import { HeaderService } from '../header.service';
   selector: 'app-header-nav-mobile',
   standalone: true,
   imports: [
-    RouterLink,
-    NgClass
+    RouterLink
   ],
   templateUrl: './header-nav-mobile.component.html',
   styleUrl: './header-nav-mobile.component.scss',
